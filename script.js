@@ -24,10 +24,10 @@ const getPlugin = (data, dist) => {
         class: 'list'
     });
 
-    container.appendChild(list);
-    fragment.appendChild(container);
-    dist.appendChild(fragment);
-    document.body.appendChild(dist);
+    container.append(list);
+    fragment.append(container);
+    dist.append(fragment);
+    $('body').append(dist);
 
     const getListItem = (() => {
         for (let i = 0; i < data.cities.length; i++) {
@@ -50,14 +50,14 @@ const getPlugin = (data, dist) => {
                 .then(res => itemWeather.innerHTML = Math.floor(res.main.temp) - 273 + "° now in this city")
                 .catch(e => console.log(e));
 
-            item.appendChild(itemName);
-            item.appendChild(itemWeather);
-            list.appendChild(item);
+            item.append(itemName);
+            item.append(itemWeather);
+            list.append(item);
         }
     })();
 };
 
-window.onload = function () {
-    const block = document.querySelector('.block');
+$(document).ready(function () {
+    const block = $('.block');
     getPlugin(data, block);
-};
+});
