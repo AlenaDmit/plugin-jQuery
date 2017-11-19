@@ -10,10 +10,15 @@ body {
 .list {
     max-width: 400px;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
 }
 
 .list__item {
     display: flex;
+    width: 100% ;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -37,4 +42,9 @@ body {
 
 .list__item__item-weather {
 
+}
+
+.active-item {
+    order: -1;
+    transition: all .3s;
 }
