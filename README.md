@@ -1,2 +1,2 @@
 # plugin jQuery
-### demo: link will be here soon
+### demo: http://cm92579.tmweb.ru/plugin-jQuery/index.html 
